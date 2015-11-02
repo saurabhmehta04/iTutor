@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>iTutor - iOS app with Beacon support</title>
+
+		<meta name="description" content="An iOS app for students and teaching assistants">
+		<meta name="author" content="Saurabh Mehta">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="img/background.jpg">
+					<h1>iTutor</h1>
+					<h3>iOS App with Beacon</h3>
+                    
+					<p>
+						<small>By <a href="http://saurabhmehta.info">Saurabh Mehta</a> / <a href="http://saurabhmehta.info">saurabhmehta.info</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h3>iTutor</h3>
+					<p>
+                        A <span class = "fragment" style="color: #98432E">platform</span> to help students get answers to their academic related questions faster than the traditional method from their TA. <br/> <span class = "fragment" >  TA's get to showcase their work through a high quality automated report. </span>
+					</p>
+
+				</section>
+				<section>
+					<section>
+						<h3>iTutor (Cont...)</h3>
+						<ul style="list-style-type:square; font-size: 60%;">
+                            <li>Facilitates mobile learning</li>
+                            <li>combined with Internet of Things to move far and beyond the mobile learning platform</li>
+                            <li>help students engaged in their academics</li>
+                       </ul>
+<!--						<p>Use the <em>Space</em> key to navigate through all slides.</p>-->
+						<br>
+<!--
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+-->
+					</section>
+					<section>
+						<h3>Smartphone because...</h3>
+						<p>It is becoming the most popualar and widespread form of communication</p>
+					</section>
+					<section>
+						<h3>iOS because...</h3>
+                        <p> <span class = "fragment" data-fragment-index = "1" style="color: #98432E" >good </span>quality apps,<span class = "fragment" data-fragment-index = "1" style="color: #98432E"> good </span> documentation, <span class = "fragment" data-fragment-index = "1" style="color: #98432E">good </span>support, <span class = "fragment" data-fragment-index = "1" style="color: #98432E">good </span> compatibility among all the iOS devices, <span class = "fragment" data-fragment-index = "1" style="color: #98432E">good </span> code</p>
+					</section>
+				</section>  
+				<section>
+					<h3>Divided into 3 phases</h3>
+                       
+                   <div class="column-left fragment" data-fragment-index="1" >iOS App <br/>
+                      <img width="150px" height="auto" data-src="img/phase1.jpg" alt="Phase 1"><br/>
+                    <ul style="list-style-type:none; font-size: 60%;">
+                        <li>buiding iOS app and web services</li>
+                       </ul>
+                    </div>
+                   <div class="column-right fragment" data-fragment-index="3">App Review
+                       <img width="150px" height="auto" data-src="img/phase3.jpg" alt="Phase 3"><br/>
+                       <ul style="list-style-type:none; font-size: 60%;">
+                        <li>Uploading to app store, demo and user review</li>
+                       </ul>
+                       
+                    </div>
+                   <div class="column-center fragment" data-fragment-index="2">Beacons<br/>
+                       
+                    <img width="150px" height="auto" data-src="img/phase2.jpg" alt="Phase 2">
+                       <ul style="list-style-type:none; font-size: 60%;">
+                        <li>Adding the beacon support</li>
+                       </ul>                                          
+                    </div>
+				</section>
+                <section> <!------------------ Phase 1: IOS App ------------------>
+                    <section data-background="#4d7e65" data-background-transition="zoom">  <!-- Prototype Design 1-->
+                        <h3>iOS App </h3>
+                        <img width= "700px" data-src="img/proto1.jpg">
+
+                    </section>
+                    <section data-background="#4d7e65"> <!-- Prototype Design 2-->
+                            <img width= "700px" data-src="img/proto2.jpg">
+                    </section>
+                </section>
+                <section data-background="#b5533c" data-background-transition="zoom">
+                    <section>
+                        <h3>Beacon Support </h3>
+                        <img width= "700px" data-src="img/proto3.jpg">
+
+                    </section>
+                    <section> 
+                        <h3>Beacons !?</h3>
+                        <ul class = "fragment roll-in" style="list-style-type:square; font-size: 80%;">
+                            <li>Bluetooth LE devices</li>
+                            <li>Broadcast a signal at a defined interval with a defined data packet</li>
+                            <li>Signal has a range of up to 100m for a normal beacon, some go as far as 500m</li>
+                            <li>They don't rely on a client connection, just a regular, public broadcast</li>
+                            <li>Low power - some run off USB, some run of batteries with lieftimes in months to years</li>
+                            <li>In contrast to GPS, beacons provide more accurate information for in-door localization</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3>Beacons !?...(Cont.)</h3>
+                        <div id="first" class="divSquareEntireSection">
+                            <figure>
+                                <img data-src = "img/beacon1.jpg">
+<!--                                <figcaption style="font-size: 20px;">test</figcaption>-->
+                            </figure>
+                        </div>
+                        <div id="second" class="divSquareEntireSection">
+                            <figure>
+                                <img data-src = "img/beacon2.png">
+<!--                                <figcaption style="font-size: 20px;">test</figcaption>-->
+                            </figure>
+                        </div>
+                        <div style='clear:both'></div>
+                        <br/>
+                        <div id="third" class="divSquareEntireSection">
+                            <figure>
+                                <img data-src = "img/beacon3.jpg">
+<!--                                <figcaption style="font-size: 20px;">test</figcaption>-->
+                            </figure>
+                        </div>
+                        <div id="fourth" class="divSquareEntireSection" style="font-size: 20px;">
+                            <br/><br/><br/>
+                            <p>Top left: working of beacons</p>
+                            <p>Top right: Compatible Devices</p>
+                            <p>Bottom left: Internals of beacons</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Beacon Protocols</h3>
+                        <img data-src = "img/beacon_battle.jpg" width = 150%>        
+                        <p style="font-size: 40px; font-style: italic; color: #FDC19D" class="subheading fragment" >Google's Eddystone protocol will be used in this project <p>
+                    </section>
+                    <section>
+                        <h3>Beacon use case</h3>
+                        <img data-src="img/beacon_usecase.jpg"> 
+                    </section>
+                </section>
+                
+                <section data-background="#533cb5" data-background-transition="zoom"> <!------------------------ Part III------------------------>
+                    <h3>Phase 3: App Review</h3>
+                    <ul>
+						<li class="fragment roll-in" data-fragment-index="1" style="list-style-type:square; font-size: 80%;">Uploading to the App Store</li>
+						<li class="fragment roll-in" data-fragment-index="2" style="list-style-type:square; font-size: 80%;">Demo in the open lab</li>
+						<li class="fragment roll-in" data-fragment-index="3" style="list-style-type:square; font-size: 80%;">User reviews</li>
+					</ul>
+                </section>
+                
+                
+                <section data-background="img/technologies.jpg" data-background-transition="slide-in fade-out">
+					<h3>Technologies</h3>
+                    <span class="column-left"> Front-end </span>
+                    <span class="column-center"> Middleware </span>
+                    <span class="column-right"> Backend</span>
+                    
+                        <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-left">
+                        <img data-src="img/middleware.jpg" style="border:none; background: none" class="centerSpecial">
+                        <img data-src="img/backend.jpg" style="border:none; background: none" class="column-right" >  
+                    
+                        
+                    
+                    <div style="clear:both"></div>
+                                       <div class="column-left fragment" data-fragment-index="1" >
+    
+<!--TODO-->
+<!--
+                                           <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-left">
+                                           <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-left">
+                                           <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-left">
+                                           <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-left">
+                                           <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-left">
+-->
+                                           <span style="font-size: 25px" > iOS9, Swift2, AngularJS, HTML5, CSS3, D3.JS</span>
+                                           
+<!--
+                    <ul style="list-style-type:square; font-size: 60%;">
+                        <li>make an ios app </li>
+                        <li>include features </li>
+                        <li>have it working </li>
+                       </ul>
+-->
+                    </div>
+                   <div class="column-right fragment" data-fragment-index="3">
+<!--TODO -->
+<!--
+                       <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-right">
+                       <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-right">
+                       <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-right">
+                       <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-right">
+-->
+                       <span style="font-size: 25px" >MySQL* / Parse*, MongoDB*</span>  
+                                          
+                    </div>
+                   <div class="column-center fragment" data-fragment-index="2">
+    <!--TODO-->
+<!--
+                       <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-center">
+                       <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-center">
+                       <img data-src="img/frontend.jpg" style="border:none; background: none" class="column-center">                      
+-->
+                       
+                       <span style="font-size: 25px" >PHP*, Python*, Go</span>
+                       
+                    </div> 
+                    
+                    
+                    
+                    <div style="clear:both; margin-top: 80px; font-size: 20px;" class = "fragment" data-fragment-index="4">
+                        <div id="first" class="divSquare"><span class="subheading">Protocols: </span>HTTP, Eddystone</div>
+                        <div id="second" class="divSquare"><span class="subheading">Tools/IDE: </span>X-code, Webstorm, Phpstorm</div>
+                        <div style='clear:both'></div>
+                        <div id="third" class="divSquare"><span class="subheading">Hardware: </span>Mac, iPhone, Estimote</div>
+                        <div id="fourth" class="divSquare"><span class="subheading">License: </span>Apple Developer Program, Invision </div>
+                        <p style="font-size: 15px; font-style: italic;" class="subheading">* These technologies will be researched, compared with other technologies and presented in the final project report <p>
+                    </div>
+				</section>
+
+<!-- using data-markdown to have code styling
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+-->
+                
+                <section data-background="img/architecture_bg.jpg" data-background-transition="slide-in fade-out">
+                    <h3>Architechture</h3>
+                    <figure>
+                        <img data-src="img/architecture.jpg" style="border:none; background: none">
+<!--                        <figcaption> Architecture</figcaption>-->                        
+                    </figure>
+                </section>
+                <section>
+                    <section>
+                        <h3>Project Timeline</h3>
+                        <img data-src="img/timeline.jpg">
+                    </section>
+                    <section>
+                        <h3>Deliverables Breakdown</h3>
+                        <img data-src="img/deliverables.jpg" width = 70%>
+                    </section>
+                </section>
+                <section>
+                    <h3>Challenges and Limitations</h3>
+                    <img data-src="img/challenges.jpg" width = 70%>
+                </section>                        
+                <section> <!-------------- Q & A  -------------->
+                    <span class="fragment fade-in">
+                        <span class="fragment fade-out">Q &amp; A</span> <br/>
+                        
+                    </span>
+                    <span class="fragment fade-in">
+                        Thank You !
+                    </span>
+                </section>
+                
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                rollingLinks: true,
+				transition: 'default', // none/fade/slide/convex/concave/zoom
+                transitionSpeed: 'slow',
+                
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+        
+
+	</body>
+</html>

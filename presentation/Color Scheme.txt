@@ -1,0 +1,5 @@
+brown: #331D06 
+bear blood: #98432E 
+smoke brown: #6F5437 
+tree bark: #544143 
+Santina beach: #FDC19D 
